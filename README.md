@@ -98,10 +98,10 @@ Results on a MacBook Air (Python 3.14.7, NumPy 2.5.4):
 
 | Scores (n) | NumPy (ms) | Loop (ms) | NumPy speed-up |
 |---:|---:|---:|---:|
-| 100 | 0.008 | 0.006 | 0.8× (loop faster) |
-| 1,000 | 0.010 | 0.068 | 6.7× |
-| 10,000 | 0.045 | 0.919 | 20.3× |
-| 100,000 | 0.528 | 9.649 | 18.3× |
-| 1,000,000 | 8.152 | 100.509 | 12.3× |
+| 100 | 0.009 | 0.007 | 0.8× (loop faster) |
+| 1,000 | 0.011 | 0.073 | 6.9× |
+| 10,000 | 0.055 | 0.976 | 17.8× |
+| 100,000 | 0.554 | 10.228 | 18.5× |
+| 1,000,000 | 8.326 | 105.377 | 12.7× |
 
-NumPy has a small fixed start-up cost per call, so a plain loop wins on tiny inputs. From 1,000 scores NumPy is 7 to 20 times faster; its lead narrows at the largest sizes as the arrays outgrow the processor's fast cache.
+NumPy has a small fixed start-up cost per call, so a plain loop wins on tiny inputs. From 1,000 scores NumPy is 7 to 19 times faster; its lead narrows at the largest sizes as the arrays outgrow the processor's fast cache.
